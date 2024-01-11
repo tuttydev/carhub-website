@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Abimota Automart</title>
+    <style>
+        .car-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+
+.car-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+
+        #header-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        #header-nav li {
+            margin-right: 10px;
+        }
+
+        #header-nav li:last-child {
+            margin-right: 0;
+        }
+
+        #header-nav a {
+            text-decoration: none;
+            color: grey;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var activePage = window.location.pathname.split("/").pop();
+            var navLinks = document.querySelectorAll("#header-nav a");
+
+            navLinks.forEach(function (link) {
+                var linkHref = link.getAttribute("href").split("/").pop();
+
+                if (linkHref === activePage) {
+                    link.style.fontWeight = "bold";
+                }
+            });
+        });
+    </script>
+
+    <style>
+    /* CSS animation */
+    @keyframes rotate {
+      0% { transform: rotate(0); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* CSS styles */
+    img {
+      animation: rotate 2s;
+    }
+  </style>
+
+</head>
+<body>
+    <nav>
+        <ul id="header-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Abimota Automart</h1>
+        <h5>We sell all kinds of luxury cars</h5>
+    </main>
+
+    <div class="car-container">
+        <div class="car-card">
+            <img src="car one.png" alt="Car 1">
+            <h3>Car 1</h3>
+            <p>Elegance</p>
+        </div>
+
+        <div class="car-card">
+            <img src="car two.png" alt="Car 2">
+            <h3>Car 2</h3>
+            <p>Road King</p>
+        </div>
+
+        <div class="car-card">
+            <img src="car three.png" alt="Car 3">
+            <h3>Volkswagen</h3>
+            <p>Portable</p>
+        </div>
+
+        <div class="car-card">
+            <img src="car four.png" alt="Car 4">
+            <h3>Ford</h3>
+            <p>Sporty</p>
+        </div>
+
+        <div class="car-card">
+            <img src="car five.png" alt="Car 5">
+            <h3>Hyundai</h3>
+            <p>Sporty</p>
+        </div>
+
+        <div class="car-card">
+            <img src="car six.jpg" alt="Car 6">
+            <h3>Rolls Royce</h3>
+            <p>Royalty</p>
+        </div>
+    </div>
+
+
+
+    <div>
+    <img id="myImage" src="main one.jpg" alt="Your Image">
+    </div>
+
+    <script>
+    // JavaScript for dynamic animation
+    var image = document.getElementById("myImage");
+    image.addEventListener("mouseover", function() {
+      this.style.animationPlayState = "paused";
+    });
+    image.addEventListener("mouseout", function() {
+      this.style.animationPlayState = "running";
+    });
+  </script>
+
+    <footer>
+        <p>&copy; 2021 tuttyDev. All rights reserved.</p>
+    </footer>
+</body>
+</html>
